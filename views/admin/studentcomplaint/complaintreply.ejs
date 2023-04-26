@@ -1,0 +1,43 @@
+<%- include('../adminsidebar.ejs')%>
+<%- include('../adminheader.ejs')%>
+
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <form action="/insertreply" method="post"  >
+
+            <input type="hidden" name="complaint_type" value="<%= reply.complaint_type %>">
+            
+            <input type="hidden" name="roll" value="<%= reply.roll %>">
+            <input type="hidden" name="com_details" value="<%= reply.com_details %>">
+       
+        <h5> Image:</h5>
+        <img src="<%= reply.com_image.url %>" width="25%">
+        <a href="<%= reply.com_image.url %>"><i class="fa-solid fa-eye-slash"></i></a>
+        <h5>Complaint Type:</h5>
+        <p><%= reply.complaint_type %></p>
+        <h5>Complaint Details:</h5>
+        <p><%= reply.com_details %></p>
+      
+        <h5> Reply Here....</h5>
+        <div class="mb-3">
+            <br>
+            <textarea name="com_reply" class="form-control" id="" cols="15" rows="4"></textarea>
+        </div>
+
+        <div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+
+    </form>
+    </div>
+    </div>
+</div>
+
+
+
+<%- include('../adminfooter.ejs')%>

@@ -1,0 +1,244 @@
+<%- include('../adminsidebar.ejs')%>
+<%-include('../adminheader.ejs')%>
+
+
+
+
+<!-- <div class="breadcrumbs">
+  <div class="col-sm-4">
+      <div class="page-header float-left">
+          <div class="page-title">
+              <h1>Dashboard</h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-8">
+      <div class="page-header float-right">
+          <div class="page-title">
+              <ol class="breadcrumb text-right">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Table</a></li>
+                  <li class="active">Data table</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+   <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+               
+                    
+                        <div class="text-center">
+                          <strong class="card-title">Student Data </strong>
+                        </div>
+                        
+               
+                  
+                        <table  class="table table-striped table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    
+  
+                                </tr>
+                            </thead>
+                            <tbody>
+                           
+                             
+  
+                                <tr>
+                                  <td><img src="<%= views.image.url %>" class="w-50"></td>
+                              </tr>
+                              
+                              
+                           
+  
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    
+  
+                                </tr>
+                            </thead>
+                            <tbody>
+                           
+                             
+  
+                                <tr>
+                                  <td><%= views._id %></td>
+                              </tr>
+                              
+                              
+                           
+  
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Student name</th>
+                                    
+  
+                                </tr>
+                            </thead>
+                            <tbody>
+                           
+                             
+  
+                                <tr>
+                                  <td><%= views.stud_name %></td>
+                              </tr>
+                              
+                              
+                           
+  
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Roll.No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                           
+                             
+  
+                                <tr>
+                                  <td><%= views.roll_no %></td>
+                              </tr>
+                              
+                              
+                           
+  
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    
+  
+                                </tr>
+                            </thead>
+                            <tbody>
+                           
+                             
+  
+                                <tr>
+                                  <td><%= views.email %></td>
+                              </tr>
+                              
+                              
+                           
+  
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Father Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.father_name %></td>
+                              </tr>
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Date of Birth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.Dateofb %></td>
+                              </tr>
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.course %></td>
+                              </tr>
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.branch %></td>
+                              </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.address %></td>
+                              </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>Mobile.No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.mobile %></td>
+                              </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>Create Password</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.C_password %></td>
+                              </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>Confirm Password</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td><%= views.Con_password %></td>
+                              </tr>
+                            </tbody>
+                            
+
+                            
+                            
+                        </table>
+                   
+                
+            </div>
+        </div>
+    </div>
+
+  
+
+
+  
+  
+  
+ 
+
+
+
+
+<%- include('../adminfooter.ejs')%>

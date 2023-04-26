@@ -1,0 +1,468 @@
+/* top-bar start */
+
+.head{
+    float: left;
+    justify-content: space-between;
+
+}
+a .farm{
+    text-decoration: none;
+    color:  #213e94;
+}
+.face{
+    font-size:33px;
+    border-radius: 55px;
+    margin: 3 px;
+    color:  #213e94;
+}
+.top-bar{
+    padding: 30px;
+
+
+}
+.non{
+    text-decoration: none;
+    
+}
+.number{
+    font-size: 27px;
+    font-weight: 500;
+    
+}
+.top-bar a h1{
+    color:    #213e94;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 48px;
+    
+}
+.top-bar a h1 span{
+    color:  #f3aa92;
+    
+}
+/* top-bar End */
+
+
+
+
+/*  navbar start*/ 
+
+.navbar{
+    background: #213e94  !important;
+    padding-top: -10px;
+}
+.navbar-nav li{
+padding: 0 5px;
+}
+.navbar-nav li a{
+color: #fff!important;
+font-size:18px;
+font-weight: 600;
+font-size: 16px;
+text-transform: uppercase;
+transition: .5s;
+padding: 30px 15px;
+}
+.hov:hover{
+    background-color:#f3aa92;
+
+}
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 15px;
+}
+
+
+
+
+/*media query start*/
+@media(max-width: 768px)
+{
+.navbar{
+    background:#213e94!important;
+}
+.img{
+    width: 100%;
+}
+}
+/*media query end*/
+/*navbar start- end*/ 
+
+.why{
+    padding-top: 30px;
+    color:#213e94 ;
+    font-family: sans-serif;
+    font-weight: 600;
+
+}
+.why span{
+    padding-top: 30px;
+    color:#f3aa92 ;
+    font-family: sans-serif;
+    font-weight: 600;
+
+}
+.whygrievance{
+    padding-top: 30px;
+    color:#213e94 ;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+  
+    font-size: 19px;
+
+}
+.whygrievanced{
+    
+    color:#213e94 ;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+   
+    font-size: 19px;
+
+}
+.main{
+    background-color: #213e94;
+    padding: 20px;
+
+}
+.btn{
+    background-color: #f3aa92;
+    color: #fff;
+}
+.component  i{
+    font-size: 100px;
+    color: #f3aa92;
+}
+.comborder{
+    border : 2px solid white ;
+    padding: 20px;
+}
+.comborder h2{
+    color: #fff;
+    padding: 5px;
+
+}
+.comborder p{
+    color: #fff;
+
+}
+/* footer start */
+.foot1 .h2{
+    font-family: sans-serif;
+    padding-top: 40px;
+    font-size: 28px;
+    font-weight: 600;
+
+}
+.foot1 h2{
+    font-family: sans-serif;
+    padding-top: 10px;
+    font-size: 28px;
+    font-weight: 600;
+
+}
+.foot1 p{
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    padding-top: 30px;
+    line-height: 2;
+}
+.footbg{
+    background-color: #f8f8fb;
+}
+
+
+
+.foo  h1{
+    color:    #213e94;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 50px;
+    
+}
+.foo  h1 span{
+    color:  #f3aa92;
+    
+}
+
+.foot1 a i{
+    color: #213e94;
+    font-size: 50px;
+    padding-top: 25px;
+}
+.footlast{
+    padding:2px;
+}
+/* footer end */
+   
+/* about start */
+.height{
+    height: 400px;
+}
+/* about End */
+
+
+/* help start */
+.help{
+    padding: 10px;
+
+}
+.paddingtop{
+    padding: 40px;
+}
+.cursive {
+    font-family: cursive;
+    color: white;
+    font-weight: 800;
+    font-size: 100px;
+  }
+/* help end */
+/*login section start*/
+.login{
+   
+    width: 100%;
+    height: 550px;
+    padding-top: 60px;
+}
+.Register{
+    
+    width: 100%;
+    height: 700px;
+    padding-top: 70px;
+
+}
+.rg-us{
+    height: 550px;
+   padding-top: 20px;
+  
+    background-color: #213e94;
+
+    
+
+}
+.log-us{
+    
+    height: 470px;
+   padding-top: 30px;
+  
+   background-color: #213e94;
+}
+.Your{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+.rgbutton{
+   
+    background-color:    #f3aa92;
+    border: none;
+    color:   #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 160px;
+   
+    margin: 4px;
+    font-weight: 400;
+
+}
+.chh{
+    padding: 40px;
+}
+
+
+
+/*login section End*/
+/* student dashboard  start*/
+.stnav h3{
+    color: white;
+    
+    font-weight: 700;
+   
+
+}
+.stnav h3 span{
+    color:  #f3aa92;
+    
+}
+.stnav{
+    text-decoration: none;
+   
+}
+.stunavpadding{
+    padding-left: 15px;
+}
+.jumbotron{
+   padding: 20px;
+   background-color: #e9ecef;
+   border: 1px solid #e9ecef ;
+   border-radius: 10px;
+   
+}
+.card{
+    padding: 10px;
+}
+.col-md-4{
+    padding-top: 20px;
+}
+.down{
+    padding-top: 50px;
+}
+.jumb{
+    padding-top: 20px;
+}
+.bg{
+   
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+  
+    padding: 20px;
+    background-color: #fff;
+}
+.form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+.editborder{
+    padding: 30px;
+   
+
+}
+.editbg{
+    background-image: url('https://veeacademy.org/grievance/assets/img/slider/rjit3.jpg');
+    
+}
+/* student dashboard  End*/
+
+
+/* loader csss start */
+
+#loading{
+    width: 100%;
+    height: 100vh;
+    background: #fff
+    url('https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif')
+     no-repeat center; 
+  /*  z-index: 99999;*/
+  }
+
+
+
+
+  
+/*admin dashboard start*/
+
+
+
+.deandashboard{
+    padding-top: 50PX;
+}
+
+
+
+.dash-left ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.dash-left ul li {
+ background-color: #f3aa92;
+  margin-bottom:5px;
+}
+.dash-left ul li a {
+    color:#333; 
+    padding:5px 15px;
+     display: block;
+     text-decoration: none;
+ }
+.dash-left ul li:hover a {
+    background-color:#213e94;
+     text-decoration: none;
+      color:#fff;
+
+  }
+.dash-left ul li a.active {
+    background-color:#213e94;
+     color:#fff;
+
+ }
+ .addblog{
+    float: right;
+ }
+ .recentblog{
+    text-decoration: none;
+    color: black;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+.dash ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.dash ul li {
+ background-color: #f1f1f1;
+  margin-bottom:5px;
+}
+.dash ul li  {
+    color:#333; 
+    padding:5px 15px;
+     display: block;
+     text-decoration: none;
+ }
+.dash ul li{
+    background-color:#213e94;
+     text-decoration: none;
+      color:#fff;
+
+  }
+.dash ul li.active {
+    background-color:#213e94;
+     color:#fff;
+
+ }
+
+.paddd{
+    padding: 3px;
+}
+
+/*admin dashboard End*/
+
+
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}

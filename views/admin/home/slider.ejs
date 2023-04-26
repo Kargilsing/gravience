@@ -1,0 +1,151 @@
+<%- include('../adminsidebar.ejs')%>
+<%-include('../adminheader.ejs')%>
+
+
+
+<!-- <div class="breadcrumbs">
+  <div class="col-sm-4">
+      <div class="page-header float-left">
+          <div class="page-title">
+              <h1>Dashboard</h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-8">
+      <div class="page-header float-right">
+          <div class="page-title">
+              <ol class="breadcrumb text-right">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Table</a></li>
+                  <li class="active">Data table</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="content mt-3">
+  <div class="animated fadeIn">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                      <div>
+                        <strong class="card-title">Data Table</strong>
+                      </div>
+                      <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Slider & description</button>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                          <thead>
+                              <tr>
+                                <th>ID</th>
+                                  <th>Home Title</th>
+                                  <th>Home Description</th>
+                                  <th>Slider</th>
+                                
+                                  <th> Action</th>
+
+                              </tr>
+                          </thead>
+                          <tbody>
+                         
+                            <% hs.forEach((item)=>{ %>
+
+                              <tr>
+                                <td><%= item._id %></td>
+                                <td><%= item.h_title %></td>
+                                <td><%= item.h_description %></td>
+                             
+                                <td><img src="<%= item.slider.url %>" width="200px"></td>
+                            <td>
+                                <a href="" class="btn btn-info">View</a>
+                                <a href="" class="btn btn-info">Edit</a>
+                                <a href="/sliderdelete/<%= item._id %>" class="btn btn-info">Delete</a>
+                            </td>
+                            
+                            </tr>
+                            
+                            <% }) %>
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div><!-- .animated -->
+
+
+</div><!-- .content -->
+</div><!-- /#right-panel -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Student Details Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form  method="post"  action="/sliderinsert" enctype="multipart/form-data">
+             
+            <div class="mb-3">
+              <label for="">Home_Title</label>
+              <input type="text" name="h_title" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="">Home Description</label>
+                <textarea name="h_description" class="form-control" id="" cols="30" rows="7"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="">Upload Slider</label>
+              <input type="file" name="slider" class="form-control">
+            </div>
+            
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+
+  <%- include('../adminfooter.ejs')%>
+
+
+
+<!-- property Name
+property address
+property state
+property city
+property images
+property price
+property description
+property type
+property area
+Beds
+Baths
+garage
+
+
+amenities -->

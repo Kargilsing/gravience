@@ -1,0 +1,107 @@
+<%- include('../adminsidebar.ejs')%>
+<%-include('../adminheader.ejs')%>
+
+
+
+<!-- <div class="breadcrumbs">
+  <div class="col-sm-4">
+      <div class="page-header float-left">
+          <div class="page-title">
+              <h1>Dashboard</h1>
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-8">
+      <div class="page-header float-right">
+          <div class="page-title">
+              <ol class="breadcrumb text-right">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Table</a></li>
+                  <li class="active">Data table</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<div class="content mt-3">
+  <div class="animated fadeIn">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                      <div>
+                        <strong class="card-title "> Help Data Table</strong>
+                      </div>
+                     
+                  </div>
+                  <div class="card-body">
+                      <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                          <thead>
+                              <tr>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Roll.No:</th>
+								<th>Email</th>
+								<th>Phone No</th>
+								<th>massage</th>
+								<th>Action</th>
+
+                              </tr>
+                          </thead>
+                          <tbody>
+                         
+							<% d.forEach((help)=>{  %>
+								<tr>
+									<td><%= help._id %></td>
+									<td><%= help.name %></td>
+									<td><%= help. roll_no %></td>
+									<td><%= help.email %></td>
+									<td><%= help.mobile %></td>
+									<td><%= help.message %></td>
+									<td><a href="/helpdelete/<%= help._id %>" class="btn btn-info">Delete</a>
+										<a href="/helpview/<%= help._id %>" class="btn btn-info">View</a>
+									
+									</td>
+
+								</tr>
+
+						   <%  }) %>
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div><!-- .animated -->
+
+
+</div><!-- .content -->
+</div><!-- /#right-panel -->
+
+
+
+<!-- Modal -->
+
+      
+
+  <%- include('../adminfooter.ejs')%>
+
+
+
+<!-- property Name
+property address
+property state
+property city
+property images
+property price
+property description
+property type
+property area
+Beds
+Baths
+garage
+
+
+amenities -->

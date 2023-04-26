@@ -1,0 +1,91 @@
+<%- include('../adminsidebar.ejs')%>
+  <%-include('../adminheader.ejs')%>
+
+
+    <div class="container">
+      <div class="row">
+        <div>
+          <h3>Update the Details</h3>
+        </div>
+        <div class="col-md-12">
+          <div class="modal-body">
+            <form method="post" action="/registrationupdate/<%= edit._id %>" enctype="multipart/form-data">
+
+              <div class="mb-3">
+                <label for="">Student Name</label>
+                <input type="text" name="stud_name" class="form-control" value="<%= edit.stud_name %>">
+              </div>
+              <div class="mb-3">
+                <label for="">Roll.No:</label>
+                <input type="text" name="roll_no" class="form-control" value="<%= edit.roll_no %>">
+              </div>
+              <div class="mb-3">
+                <label for="">Father Name</label>
+                <input type="text" name="father_name" class="form-control" value="<%= edit.father_name %>">
+              </div>
+              <div class="mb-3">
+                <label for="">DOB</label>
+                <input type="date" name="Dateofb" class="form-control" value="<%= edit.Dateofb %>">
+              </div>
+              <div class="mb-3">
+                <label for="">Email.Id:</label>
+                <input type="text" name="email" class="form-control" value="<%= edit.email %>">
+              </div>
+              <div class="mb-3">
+                <label for="">Course</label>
+                <input type="text" name="" class="form-select" >
+              </div>
+              <div class="mb-3">
+                <label for="">Branch</label>
+                <select name="branch" id="" class="form-select">
+                  <option>
+                    <%= edit.branch %>
+                  </option>
+                
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="">Permanent Address</label>
+                <textarea name="address" class="form-control" id="" cols="30" rows="7"><%= edit.address %></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="">Mobile.No:</label>
+                <input type="number" name="mobile" class="form-control" value="<%= edit.mobile %>">
+              </div>
+
+              <div class="mb-3">
+                <label for="">Create Password</label>
+                <input type="password" name="C_password" class="form-control" value="<%= edit.C_password %>">
+              </div>
+              <div class="mb-3">
+                <label for="">Confirm Password</label>
+                <input type="password" name="Con_password" class="form-control" value="<%= edit.Con_password %>">
+              </div>
+
+
+
+
+              <div class="mb-3">
+                <label for="">Passport Images</label>
+                <input type="file" name="image" class="form-control">
+                <img src="<%= edit.image.url %>" width="150px">
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary">Update </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <%- include('../adminfooter.ejs')%>

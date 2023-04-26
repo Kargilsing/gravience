@@ -1,0 +1,60 @@
+
+<%- include('./header.ejs') %>
+
+
+<div class=" container-fluid  login">
+    
+    <div class="container">
+        <div class="row">
+    
+            
+
+   <div class=" col-md-6 log-us shadow-lg"><h4 class="ml-11 text-center Your">Login  Your Account </h4>
+   <% if(message.length > 0){ %>
+    <div class="alert alert-danger">
+      <%= message %>
+     </div>
+  <% } %>
+      
+     
+
+                        
+    <form class="ng-untouched ng-pristine ng-invalid  chh"  action="/verifydeanlogin" method="post">
+      <div class="form-group">
+          <label>Roll.No: or Email </label>
+
+        <input type="text" name="email" placeholder="email or Roll No." class="form-control ng-untouched ng-pristine ng-invalid">
+      </div>
+      <div class="form-group">
+        <br>
+          <label>Password</label>
+        <input type="password" name="C_password" placeholder="Password" class="form-control ng-untouched ng-pristine ng-invalid">
+      </div>
+
+      <br><br>
+      
+      <div >
+        <button class="rgbutton shadow-lg form-group" type="submit" value="Login" onclick="">Log In</button>
+        
+        
+        &nbsp; &nbsp;  &nbsp;<span>forget account & password?</span><a href="/forget"> click</a>
+
+        
+           &nbsp; &nbsp;<span>Already have an account?</span><a href="/deanRegistration"> Register here.. </a>
+         
+         
+           
+      
+         
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6"></div>
+
+
+
+
+    </div>
+</div>
+</div>
+<%- include('./footer.ejs')  %>

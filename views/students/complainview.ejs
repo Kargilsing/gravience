@@ -1,0 +1,54 @@
+<%- include('studentheader.ejs')%>
+
+
+
+<div class="editbg">
+
+  <div class="container ">
+    <div class="row   editborder">
+      
+      <div class="col-md-2">
+      </div>
+
+
+      <div class="col-md-8 bg">
+        <div class="text-center">
+          <h3>View Complaints</h3>
+        </div>
+        <div class="modal-body">
+
+
+          <table class="table table-success table-striped">
+            <thead>
+              <tr class="noExl">
+              </tr><tr><th>Complaint Type</th><th><%= Gra.complaint_type %></th></tr>
+              <tr><th>Date</th><th><%=  Gra.createdAt.toLocaleString() %></th></tr>
+              <tr><th>Semester</th><th><%= Gra.semester %></th></tr>
+              <tr><th>course_title</th><th><%= Gra.course_title %></th></tr>
+              <tr><th>roll</th><th><%= Gra.roll %></th></tr>
+              <tr><th>Complaint Detels</th><th><%= Gra.com_details %></th></tr>
+              <tr><th>Files</th><th><a href="<%= Gra.com_image.url %>">View Image</a>
+              </th></tr>
+              
+              </thead>
+            
+          </table>
+
+         
+          
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+</div>
