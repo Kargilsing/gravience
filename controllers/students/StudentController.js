@@ -18,10 +18,11 @@ class StudentController {
       const { stud_name, email, roll_no, course, mobile, branch, _id, image } =
         req.student;
       const view = await GravienceModel.find({ roll: roll_no });
-      // console.log(image)
+      const v1 =await ReplyadminModel.findOne({roll:roll_no})
+      console.log(v1)
 
       res.render("students/studentdashboard", { n: stud_name, e: email,r: roll_no,c: course,m: mobile,b: branch,i: _id,g: image,
-        v: view,
+        v: view,v12:v1
       });
     } catch (error) {
       console.log(error);
@@ -105,6 +106,7 @@ class StudentController {
   static solvedcomplaint = async(req,res)=>{
     try{
       const data = await ReplyadminModel.find()
+      console.log(data)
          
        res.render('students/solvedcomplaint',{re:data})
 

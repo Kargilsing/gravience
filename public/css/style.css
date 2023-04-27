@@ -408,12 +408,18 @@ padding: 30px 15px;
 
 
 
+.loginbtblue{
+    background-color:#213e94 !important;
+    color: white !important;
+}
 
 
 
 
-
-
+.loginbt{
+    background-color:#f3aa92  !important;
+    color: white !important;
+}
 
 
 

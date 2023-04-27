@@ -1,10 +1,6 @@
 const express = require('express')
-const AboutController = require('../controllers/admin/AboutController')
 const AdminController = require('../controllers/admin/AdminController')
-const BenefitController = require('../controllers/admin/BenefitController')
 const complaintController = require('../controllers/admin/ComplaintController')
-const FeatureController = require('../controllers/admin/FeatureController')
-const GRSController = require('../controllers/admin/GRSController')
 const HelpController = require('../controllers/admin/HelpController')
 const HomeComtroller = require('../controllers/admin/HomeController')
 const SregisterController = require('../controllers/admin/SregisterController') 
@@ -49,7 +45,7 @@ router.post('/deanregister',DeanController.deanregisterinsert)
 router.post('/verifydeanlogin',DeanController.deanverifylogin)
 router.get('/deanlogout',DeanController.deanlogout)
  //dean controller  dashboard
- router.get('/deanupdatepassword',DeanController.deanupdatePassword)
+
  router.get('/deangraviencedisplay',DeanController.deangraviencedisplay)
  router.get('/solvecomplaintdisplay',DeanController.solvecomplaintdisplay)
  router.get('/massagetoadmin',DeanController.massagetoadmin)
@@ -77,22 +73,9 @@ router.post('/adminchangepassword/:id',AdminController.adminupdatePassword)
 // admin home router
 router.get('/admin/dashboard/home/slider',HomeComtroller.slider)
 router.post('/sliderinsert',HomeComtroller.sliderinsert)
-router.get('/admin/dashboard/home/services',HomeComtroller.service)
+
 router.get('/sliderdelete/:id',HomeComtroller.sliderdelete)
-// admin about router
-router.get('/admin/dashboard/about/slider',AboutController.slider)
-router.get('/admin/dashboard/about/services',AboutController.service)
-//admin GRS router
-router.get('/admin/dashboard/GRS/slider',GRSController.slider)
-router.get('/admin/dashboard/GRS/services',GRSController.service)
-//admin Features router
-router.get('/admin/dashboard/features/slider',FeatureController.slider)
-router.get('/admin/dashboard/features/services',FeatureController.service)
-//admin Benefits router
-router.get('/admin/dashboard/benefits/slider',BenefitController.slider)
-router.get('/admin/dashboard/benefits/services',BenefitController.service)
 //admin help router
-router.get('/admin/dashboard/help/slider',HelpController.slider)
 router.get('/admin/dashboard/help/services',HelpController.service)
 router.get('/helpdelete/:id',HelpController.helpdelete)
 //admin studentRegistration router

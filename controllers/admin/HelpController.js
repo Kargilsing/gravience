@@ -3,9 +3,6 @@ const HelpModel = require("../../models/Help")
 class HelpController{
 
 
-    static slider =(req,res) =>{
-        res.render('admin/help/slider')
-    }
 
 
 

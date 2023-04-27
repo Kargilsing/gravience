@@ -8,14 +8,65 @@
 				</ul>
                
 					<h2></h2>
-                        <h4> Your Email:  </h4>
+					    <h4> Name : <%= n %> </h4>
+                        <h4> Email: <%= e %> </h4>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-				
+						<h5>You can change your password</h5>
+						
+						<div class="col-sm-4 " style="padding-top: 9px;">
+							<div class="page-header float-left">
+								<div class="page-title">
+									<a href="#" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#changepassword">Change Password</a>
+								</div>
+							</div>
+						</div> 
 			</div>
 		</div>
 	</div>
 </div>
 
+
+  <!-- change password model start -->
+
+  <div class="modal fade" id="changepassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Change Your password</h1>
+
+              
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/deanchangepassword/<%= i %>" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label for="">Old Password</label>
+                        <input type="password" name="oldPassword" class="form-control" value="" >
+                    </div>
+                    
+
+
+
+                    <div class="mb-3">
+                        <label for="">New Password</label>
+                        <input type="password" name="newPassword" class="form-control" value="" >
+                    </div>
+                    <div class="mb-3">
+                        <label for=""> Confirm Password</label>
+                        <input type="password" name="confirmPassword" class="form-control" value="" >
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" >Update </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+ <!-- change password model end -->
 
   
 

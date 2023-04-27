@@ -13,6 +13,7 @@ class GravienceController {
   static complaint = async (req, res) => {
     try {
       const complaint = await GravienceModel.findById(req.params.id)
+      console.log(complaint)
       
       res.render("students/complainview",{Gra:complaint});
     } catch (error) {

@@ -65,9 +65,6 @@ class HomeComtroller{
 
 
 
-    static service = (req,res)=>{
-        res.render('admin/home/service')
-    }
 
 
 

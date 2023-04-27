@@ -2,29 +2,31 @@
 
 
     <div class="container">
-       
+
         <div class="row">
             <div class="col-md-4">
                 <div class="card mx-auto" style="width: 20rem;">
                     <img class="card-img-top mx-auto" style="width: 50%; height:150px; border-radius:100px;"
-                        src="<%= g.url %>" alt="user" >
+                        src="<%= g.url %>" alt="user">
                     <div class="card-body">
                         <h4 float-right=""><a href="/studentlogout">logout</a></h4>
                         <h5 class="card-title">Student Profile Info</h5>
                         <p class="card-text"><i class="fa fa-user">&nbsp;</i>
                             <%= n %>
                         </p>
-                        
-                        <p class="card-text"><i class="fa fa-user">&nbsp;</i>Email:  <%= e %></p>
+
+                        <p class="card-text"><i class="fa fa-user">&nbsp;</i>Email: <%= e %>
+                        </p>
                         <p class="card-text"> Roll Number : <%= r %>
                         </p>
                         <p class="card-text"> Mobile Number : <%= m %>
                         </p>
 
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateimage" >Edit
-                            Profile</a> 
-                            &nbsp;
-                            <a href="#" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#changepassword">Change Password</a>
+                        <a href="#" class="btn loginbtblue" data-bs-toggle="modal" data-bs-target="#updateimage">Edit
+                            Profile</a>
+                        &nbsp;
+                        <a href="#" class="btn loginbt" data-bs-toggle="modal" data-bs-target="#changepassword">Change
+                            Password</a>
 
 
                     </div>
@@ -44,7 +46,7 @@
                                     <h5 class="card-title">Notifications</h5>
                                     <p class="card-text">view the notifications from grievance cell.</p>
                                     <a href="#" data-toggle="modal" data-target="#student_login"
-                                        class="btn btn-primary">see notifications</a>
+                                        class="btn  loginbtblue">see notifications</a>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +63,7 @@
                                 <!-- <a href="#" data-toggle="modal" data-target="#category" class="btn btn-success">Add</a> -->
 
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                <button type="button" class="btn  loginbtblue" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal">Complaint</button>
 
 
@@ -75,8 +77,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">#####</h5>
                                 <p class="card-text">view all the notifications from grievance cell</p>
-                                <a href="#" data-toggle="modal" data-target="#brand" class="btn btn-success">Add</a>
-                                <a href="#" class="btn btn-primary">Manage</a>
+                                <a href="#" data-toggle="modal" data-target="#brand" class="btn  loginbtblue">Add</a>
+                                <a href="#" class="btn  loginbt">Manage</a>
                             </div>
 
                         </div>
@@ -87,11 +89,11 @@
                                 <h5 class="card-title">View Status</h5>
                                 <p class="card-text"> view status of the grievance/complaint posted by you</p>
                                 <!-- <a href="#" data-toggle="modal" data-target="#product"class="btn btn-success">Add</a> -->
-                                <a href="3" class="btn btn-primary" data-bs-toggle="modal"
+                                <a href="3" class="btn loginbtblue" data-bs-toggle="modal"
                                     data-bs-target="#view_status">View</a>
 
 
-                             
+
 
                             </div>
                         </div>
@@ -105,84 +107,94 @@
 
 
 
-   <!-- Modal  for view complaint start-->
-   <div class="modal fade" id="view_status" tabindex="-1" role="dialog"
-   aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-lg modal-dialog" role="document">
-       <div class="modal-content">
-           <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">View Your Grievance
-                   Status </h5>
+    <!-- Modal  for view complaint start-->
+    <div class="modal fade" id="view_status" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-lg modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">View Your Grievance
+                        Status </h5>
 
 
-               <button type="button" class="btn-close" data-bs-dismiss="modal"
-                   aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="overflow-x: auto;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input id="pglmt" placeholder="Page Limit" title="Page Limit" value="10"
+                                        class="form-control">
+                                </td>
+                                <td>
+                                    <button id="btnApply" class="btn loginbtblue">Apply</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table id="table1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <td>Date</td>
+                                <td>Complaint Type</td>
+                                <td>Roll.No</td>
+                                <td>View Status /Admin_Reply</td>
+                                <td>View complaints</td>
+                                <td>Reminder</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tbody>
+
+                            <% v.forEach((item)=>{ %>
 
 
+                                <tr>
+                                    <td>
+                                        <%= item.createdAt.toLocaleDateString() %>
+                                    </td>
+                                    <td>
+                                        <%= item.complaint_type %>
+                                    </td>
+                                    <td>
+                                        <%= item.roll %>
+                                        
+                                    </td>
+                                    <td>
+                                        <% if(v12) { %>
+                                            
+                                           
+                                            <p class="text-black"><%= v12.com_reply %></p>
 
-           </div>
-           <div class="modal-body" style="overflow-x: auto;">
-               <table>
-                   <tbody>
-                       <tr>
-                           <td>
-                               <input id="pglmt" placeholder="Page Limit"
-                                   title="Page Limit" value="10" class="form-control">
-                           </td>
-                           <td>
-                               <button id="btnApply"
-                                   class="btn btn-danger">Apply</button>
-                           </td>
-                       </tr>
-                   </tbody>
-               </table>
+                                            
 
-               <table id="table1" class="table table-bordered table-striped">
-                   <thead>
-                       <tr>
-                           <td>Date</td>
-                           <td>Complaint Type</td>
-                           <td>Roll.No</td>
-                           <td>View Status</td>
-                           <td>View complaints</td>
-                           <td>Reminder</td>
+                                        <% } else {%>
 
-                       </tr>
-                   </thead>
-                   <tbody>
-                   </tbody>
-                   <tbody>
+                                            <a href="#" class="btn btn-danger">Padding</a>   
 
-                       <% v.forEach((item)=>{ %>
-                        
+                                        <% } %>
+                                    </td>
 
-                           <tr>
-                               <td> <%=  item.createdAt.toLocaleDateString() %></td>
-                               <td>
-                                   <%= item.complaint_type %>
-                               </td>
-                               <td> <%= item.roll %></td>
-                               <td>
-                                   <a href="/solvedcomplaint"
-                                       class="btn btn-success">Solved</a>
-                               </td>
-
-                               <td><a href="/complaint/<%= item._id %>" class="btn btn-primary">View
-                                       Complaints</a></td>
-                               <td><a href="" class="btn btn-info">Reminder</a></td>
-                           </tr>
+                                    <td><a href="/complaint/<%= item._id %>" class="btn loginbtblue">View
+                                            Complaints</a></td>
+                                    <td><a href="" class="btn loginbt">Reminder</a></td>
+                                </tr>
 
 
-                           <% }) %>
+                                <% }) %>
 
 
-                   </tbody>
-               </table>
-           </div>
-       </div>
-   </div>
-</div>
-  <!-- Modal  for view complaint End-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal  for view complaint End-->
 
 
 
@@ -220,7 +232,7 @@
                             <label for="">Complaint Details</label>
                             <textarea name="com_details" class="form-control" id="" cols="15" rows="4"></textarea>
                         </div>
-                       
+
 
                         <div class="mb-3">
                             <label for="">Upload Images</label>
@@ -228,14 +240,14 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn loginbtblue">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-     <!-- Modal  of insert complaint End-->
+    <!-- Modal  of insert complaint End-->
 
 
     <!-- edit-update  profile image model start-->
@@ -259,28 +271,28 @@
                         </div>
                         <div class="mb-3">
                             <label for="">Course:</label>
-                            <input type="text" name="course"class="form-control" value="<%= c %>" readonly>
+                            <input type="text" name="course" class="form-control" value="<%= c %>" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="">Year:</label>
-                            <input type="text" name="branch"class="form-control" value="<%= b %>" readonly>
+                            <input type="text" name="branch" class="form-control" value="<%= b %>" readonly>
                         </div>
-                       
+
                         <div class="mb-3">
                             <label for="">Email.Id:</label>
                             <input type="text" name="email" class="form-control" value="<%= e %>">
                         </div>
-                       
-                       
 
-                        
-                        
+
+
+
+
                         <div class="mb-3">
                             <label for="">Mobile.No:</label>
                             <input type="number" name="mobile" class="form-control" value="<%= m %>">
                         </div>
 
-                        
+
 
 
 
@@ -292,7 +304,7 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="btn btn-primary">Update </button>
+                            <button type="submit" class="btn loginbtblue">Update </button>
                         </div>
                     </form>
                 </div>
@@ -302,19 +314,19 @@
 
 
 
-   
-     <!-- edit-update  profile image model end-->
+
+    <!-- edit-update  profile image model end-->
 
 
-     <!-- change password model start -->
+    <!-- change password model start -->
 
-     <div class="modal fade" id="changepassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="changepassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Change Your password</h1>
 
-                  
+
 
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -323,30 +335,27 @@
 
                         <div class="mb-3">
                             <label for="">Old Password</label>
-                            <input type="password" name="oldPassword" class="form-control" value="" >
+                            <input type="password" name="oldPassword" class="form-control" value="">
                         </div>
-                        
+
 
 
 
                         <div class="mb-3">
                             <label for="">New Password</label>
-                            <input type="password" name="newPassword" class="form-control" value="" >
+                            <input type="password" name="newPassword" class="form-control" value="">
                         </div>
                         <div class="mb-3">
                             <label for=""> Confirm Password</label>
-                            <input type="password" name="confirmPassword" class="form-control" value="" >
+                            <input type="password" name="confirmPassword" class="form-control" value="">
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-primary" >Update </button>
+                            <button type="submit" class="btn loginbtblue">Update </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-     
-     <!-- change password model end -->
 
-
-     
+    <!-- change password model end -->

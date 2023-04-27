@@ -1,22 +1,24 @@
 const jwt = require('jsonwebtoken')
-const DeanregisterModel = require('../models/Adminregister')
+const DeanregisterModel = require('../models/Deanregister')
 
 
 const checkdeanAuth = async(req,res,next)=>{
     // console.log('hello middddddddllee')
-    const  {token} = req.cookies
-    // console.log(token)
-    if(!token){
+    const  {token12} = req.cookies
+    console.log("hello" + token12)
+    if(!token12){
      
         req.flash('error','Unautherized dean')
         res.redirect('/login')
     }else{
-        const data = jwt.verify(token,'dean123')
+        const data = jwt.verify(token12,'dfnmewghghdgfdhghfbnxchgdhgcgxb')
+        // console.log(data)
        
 
         const dean = await DeanregisterModel.findOne({_id:data.id})
-        // console.log(student)
+        // console.log(dean)
         req.dean = dean
+        console.log(req.dean)
        
        
         
