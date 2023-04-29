@@ -1,4 +1,6 @@
 const DeanregisterModel = require("../../models/Deanregister");
+const GravienceModel = require("../../models/Gravience");
+const ReplyadminModel = require("../../models/Replyadmin");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -104,10 +106,32 @@ class DeanController {
  
 
   static deangraviencedisplay = async (req, res) => {
-    res.render("dean/graviencedisplay");
+    try {
+      const complaint = await GravienceModel.find().sort({ _id: -1 });
+      // console.log(complaint)
+
+      res.render("dean/graviencedisplay", { com: complaint });
+    } catch (error) {
+      console.log(error);
+    }
+    
   };
+
+
+
+
   static solvecomplaintdisplay = async (req, res) => {
-    res.render("dean/solvecomplaints");
+    try {
+      const complaint = await ReplyadminModel.find().sort({ _id: -1 });
+      // console.log(complaint)
+
+      res.render("dean/solvecomplaints", {
+        view: complaint,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    
   };
 
   static massagetoadmin = async (req, res) => {

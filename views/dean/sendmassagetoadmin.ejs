@@ -11,6 +11,40 @@
     <div class="col-sm-4 " style="padding-top: 9px;">
         <div class="page-header float-left">
             <div class="page-title">
+                <div class="modal-body">
+                    <form method="post" action="/stprofileupdate/<%= i %>" enctype="multipart/form-data">
+
+                       
+                       
+                        
+                        
+                        <div class="mb-3" style=" margin:2px;">
+                            
+                            <input type="text" name="stud_name" class="form-control" value="" placeholder="Name">
+                            <br>
+                            <input type="text" name="email" class="form-control" value="" placeholder="Email.ID">
+                            <br>
+                            <input type="number" name="mobile" class="form-control" value="" placeholder=" Mobile.No:">
+                            <br>
+                            <textarea type="text" name="email" class="form-control" value="" placeholder="Type your massage"> </textarea>
+                        </div>
+
+                        
+
+
+
+
+
+
+                        
+
+                        <div>
+                            <button type="submit" class="btn loginbtblue">Send </button>
+                        </div>
+                    </form>
+                </div>
+
+
                 
             </div>
         </div>
